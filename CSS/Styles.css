@@ -231,6 +231,8 @@ body{
     gap: 10px;
 }
 
+}
+
 /* MQ celular */
 
 @media screen and (max-width: 320px) {
