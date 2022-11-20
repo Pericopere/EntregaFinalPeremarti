@@ -6,8 +6,6 @@
     box-sizing: border-box;
 }
 
-
-
 /* Estilos de header */
 
 /* Propiedades del index */
@@ -188,8 +186,11 @@ header img{
 /* Propiedades de contacto */
 
 .formulario{
-    font-family: 'Roboto', sans-serif;
     margin: 2rem;
+}
+
+.enviar-formulario:hover{
+    transform: scale(0.8);
 }
 
 /* Estilos de footer */ 
