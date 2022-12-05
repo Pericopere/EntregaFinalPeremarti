@@ -1,0 +1,82 @@
+/* BLOG */
+
+@import "tablet.scss";
+
+/* estilos de body */
+
+body{
+    .body-blog > * {
+        box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 4px;
+        padding: 10px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    .body-blog{
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        "header-blog" 
+        "main-blog"
+        "parrafo1-blog"
+        "imagen1-blog"
+        "parrafo2-blog"
+        "imagen2-blog"
+        "footer-blog";
+    }
+}
+
+/* estilos de header */
+
+header{
+    .header-blog{
+        grid-area: header-blog;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        .imagen-logo{
+            width: 15%;
+        }
+    }
+
+}
+
+main{
+    .main-blog{
+        grid-area: main-blog;
+        @include tablet{
+        grid-template-columns: 350px auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "parrafo1-blog" "imagen1-blog"
+            "imagen2-blog" "parrafo2-blog";
+        }
+    }
+    .parrafo1-blog{
+        grid-area: parrafo1-blog;
+        @include tablet{
+            grid-area: parrafo1-blog;
+        }
+    }
+    .imagen1-blog{
+        grid-area: imagen1-blog;
+        width: 30%;
+        @include tablet{
+            grid-area: imagen1-blog;
+        }
+    }
+    .parrafo2.blog{
+        grid-area: parrafo2-blog;
+        @include tablet{
+            grid-area: parrafo2-blog;
+        }
+    }
+    .imagen2-blog{
+        grid-area: imagen2-blog;
+        width: 30%;
+        @include tablet{
+            grid-area: imagen2-blog;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+/* CONTACTO */
+
+@import "tablet.scss";
+
+/* estilos de body */
+
+body{
+    .body-contacto > * {
+        box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 4px;
+        padding: 10px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    .body-contacto{
+        display: grid;
+        gap: 10px;
+    }
+
+}
+
+/* estilos de header */
+
+header{
+    .header-contacto{
+        grid-area: header-home;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        .imagen-logo{
+            width: 15%;
+        }
+
+    }
+}
+
+/* estilos de main */
+
+main{
+    #contac{
+        height: 70vh;
+        padding-top: 50px;
+        h2{
+            padding-bottom: 20px;
+        }
+    }
+    #contact form {
+        width: 40%;
+        margin: 0 auto;
+        .btn{
+            width: 100%;
+            border-radius: 5px;
+        }
+      }
+    @include tablet{
+        .form-container{
+            margin: 100px;
+        }
+    }
+}
+
+/* estilos de footer */

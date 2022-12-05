@@ -1,0 +1,91 @@
+/* SERVICIOS */
+
+@import "tablet.scss";
+
+/* Estilos de body */
+
+body{
+    .body-servicios > * {
+        box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 4px;
+        padding: 10px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    .body-servicios{
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+        "header-servicios" 
+        "container-servicios"
+        "services-row"
+        "services-box1"
+        "services-box2"
+        "services-box3"
+        "footer-home";
+    }
+}
+
+/* Estilos de header */
+
+header{
+    .header-servicios{
+        grid-area: header-servicios;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        .imagen-logo{
+            width: 15%;
+        }
+    }
+}
+
+/* Estilos de main */
+
+main{
+    #services{
+        height: 70vh;
+        padding-top: 70px;
+        background: #f9f9f9;
+        h2{
+            padding-bottom: 50px;
+        }
+    }
+    .services-row{
+        .services-box{
+            float: left;
+            width: 33%;
+            padding: 20px;
+            img{
+                width: 100%;
+                padding-bottom: 20px;
+            }
+        }
+        .servicios-img1{
+            width: 50%;
+        }
+    @include tablet{
+        .services-box1 {
+            float: left;
+            width: 33%;
+            padding: 20px;
+          }
+        .services-box2 {
+            float: left;
+            width: 33%;
+            padding: 20px;
+          }
+        .services-box3 {
+            float: left;
+            width: 33%;
+            padding: 20px;
+          }
+        .services-box img {
+            width: 100%;
+            padding-bottom: 20px;
+          }     
+    }
+        }
+    
+}

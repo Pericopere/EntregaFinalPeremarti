@@ -1,0 +1,101 @@
+/* CLIENTES */
+
+@import "tablet.scss";
+
+/* estilos de body */
+
+body{
+    .body-clientes > * {
+        box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 4px;
+        padding: 10px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    .body-clientes{
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+        "header-clientes" 
+        "main1-clientes"
+        "main2-clientes"
+        "footer-clientes";
+    }
+}
+
+/* estilos de header */
+
+header{
+    .header-clientes{
+        grid-area: header-clientes;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        .imagen-logo{
+            width: 15%;
+        }
+    }
+}
+
+/* estilos de main */
+
+main{
+    .main1-clientes{
+        grid-area: main1-clientes;
+        @include tablet{
+            display: grid;
+            gap: 10px;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: auto 400px auto;
+            grid-template-rows: 200px auto;
+            grid-template-areas: 
+                "imagen1-clientes parrafo1-clientes imagen2-clientes"
+
+        }
+        }
+    .imagen1-clientes{
+            width: 30%;
+            @include tablet{
+                width: 40%;
+            }
+        }
+    .main2-clientes{
+        grid-area: main2-clientes;
+        @include tablet{
+            display: grid;
+            gap: 10px;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: auto 400px auto;
+            grid-template-rows: 200px auto;
+            grid-template-areas: 
+                "imagen3-clientes parrafo2-clientes imagen4-clientes"
+        }
+        }
+    .imagen2-clientes{
+            width: 30%;
+            @include tablet{
+                width: 40%;
+            }
+        }
+    .imagen3-clientes{
+            width: 30%;
+            @include tablet{
+                width: 40%;
+            }
+        }
+    .imagen4-clientes{
+            width: 30%;
+            @include tablet{
+                width: 40%;
+            }
+        }
+    }
+
+footer{
+    .footer-clientes{
+        grid-area: footer-clientes;
+    }
+}

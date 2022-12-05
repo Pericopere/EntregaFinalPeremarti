@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+//propiedades de home
+
+@import "home.scss";
+@import "tablet.scss";
+@import "servicios.scss";
+@import "clientes.scss";
+@import "blog.scss";
+@import "contacto.scss"
+

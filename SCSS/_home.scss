@@ -1,0 +1,149 @@
+/* HOME */
+
+@import "tablet.scss";
+
+/* estilos de body */
+
+body{
+    .body-home > * {
+        box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 4px;
+        padding: 10px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    .body-home{
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "header-home" 
+            "titulo-main"
+            "main-home"
+            "parrafo1-home"
+            "imagen1-home"
+            "parrafo2-home"
+            "imagen2-home"
+            "parrafo2-home"
+            "imagen2-home"
+            "parrafo1-home"
+            "imagen1-home"
+            "footer-home";
+    }
+}
+
+/* estilos de header */
+
+header{
+    .header-home{
+        grid-area: header-home;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        .imagen-logo{
+            width: 15%;
+        }
+
+    }
+}
+
+/* estilos de main */
+
+main{
+    min-height: 100%;
+    .titulo-main{
+        grid-area: titulo-main;
+        text-align: center;
+        @include tablet{
+            text-align: center;
+            padding: 4rem;
+        }
+    }
+    .main-home{
+        @include tablet{
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            grid-template-columns: 350px auto;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: 
+                "parrafo1-home imagen1-home"
+                "imagen2-home parrafo2-home"
+                "parrafo3-home imagen3-home"
+                "imagen4-home parrafo4-home"
+                    ;
+        }
+        .parrafo1-home{
+            grid-area: parrafo1-home;
+            margin: 4px;
+            @include tablet{
+                grid-area: parrafo1-home;
+                margin: 4px;
+            }
+        }
+        .imagen1-home{
+            width: 30%;
+            @include tablet{
+                grid-area: imagen1-home;
+                align-items: center;
+            }
+        }
+        .parrafo2-home{
+            grid-area: parrafo2-home;
+            margin: 4px;
+            @include tablet{
+                grid-area: parrafo2-home;
+                margin: 4px;
+            }
+        }
+        .imagen2-home{
+            width: 30%;
+            @include tablet{
+                grid-area: imagen2-home;
+                align-items: center;
+            }
+        }
+        .parrafo3-home{
+            grid-area: parrafo3-home;
+            margin: 4px;
+            @include tablet{
+                grid-area: parrafo3-home;
+                margin: 4px;
+            }
+        }
+        .imagen3-home{
+            width: 30%;
+            @include tablet{
+                grid-area: imagen3-home;
+                align-items: center;
+            }
+        }
+        .parrafo4-home{
+            grid-area: parrafo4-home;
+            margin: 4px;
+            @include tablet{
+                grid-area: parrafo4-home;
+                margin: 4px;
+            }
+        }
+        .imagen4-home{
+            width: 30%;
+            @include tablet{
+                grid-area: imagen4-home;
+                align-items: center;
+            }
+        }
+    }
+}
+
+/* estilos de footer */
+
+footer{
+    .footer-home{
+        @include tablet{
+            grid-area: footer-home
+        }
+    }
+}
