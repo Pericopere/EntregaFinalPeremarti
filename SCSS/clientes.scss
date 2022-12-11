@@ -1,6 +1,7 @@
 /* CLIENTES */
 
 @import "tablet.scss";
+@import "computadora";
 
 /* estilos de body */
 
@@ -16,7 +17,7 @@ body{
         display: grid;
         gap: 10px;
         grid-template-areas:
-        "header-clientes" 
+        "header-clientes"
         "main1-clientes"
         "main2-clientes"
         "footer-clientes";
@@ -42,54 +43,141 @@ header{
 
 main{
     .main1-clientes{
-        grid-area: main1-clientes;
         @include tablet{
             display: grid;
             gap: 10px;
             align-items: center;
             justify-items: center;
-            grid-template-columns: auto 400px auto;
-            grid-template-rows: 200px auto;
+            justify-content: center;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
             grid-template-areas: 
-                "imagen1-clientes parrafo1-clientes imagen2-clientes"
-
+                "imagen1-clientes parrafo1-clientes"
         }
+        @include computadora{
+            display: grid;
+            gap: 10px;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "imagen1-clientes parrafo1-clientes"
         }
-    .imagen1-clientes{
+        .imagen1-clientes{
             width: 30%;
             @include tablet{
                 width: 40%;
+                justify-items: center;
             }
+            @include computadora{
+                width: 40%;
+                justify-items: center;
+            }
+        }
+        .parrafo1-clientes{
+            width: 100%;
+            text-align: center;
+            justify-items: center;
+            @include tablet{
+                width: 100%;
+                text-align: center;
+                background-color: whitesmoke;
+                border: 2px solid #474f58;
+                border-radius: 5px;
+            }
+            @include computadora{
+                width: 100%;
+                text-align: center;
+                background-color: whitesmoke;
+                border: 2px solid #474f58;
+                border-radius: 5px;
+            }
+        }
+        .imagen2-clientes{
+            width: 30%;
+            @include tablet{
+                width: 40%;
+                justify-items: center;
+            }
+            @include computadora{
+                width: 40%;
+                justify-items: center;
+            }
+        }
         }
     .main2-clientes{
-        grid-area: main2-clientes;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "imagen4-clientes"
+        "parrafo2-clientes";
         @include tablet{
             display: grid;
             gap: 10px;
             align-items: center;
             justify-items: center;
-            grid-template-columns: auto 400px auto;
-            grid-template-rows: 200px auto;
+            justify-content: center;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
             grid-template-areas: 
-                "imagen3-clientes parrafo2-clientes imagen4-clientes"
+                "parrafo2-clientes imagen4-clientes"
         }
+        @include computadora{
+            display: grid;
+            gap: 10px;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "parrafo2-clientes imagen4-clientes"
         }
-    .imagen2-clientes{
-            width: 30%;
-            @include tablet{
-                width: 40%;
-            }
         }
     .imagen3-clientes{
             width: 30%;
             @include tablet{
                 width: 40%;
             }
+            @include computadora{
+                width: 40%;
+            }
+        }
+    .parrafo2-clientes{
+            width: 100%;
+            text-align: center;
+            justify-items: center;
+            @include tablet{
+                width: 100%;
+                text-align: center;
+                background-color: whitesmoke;
+                border: 2px solid #474f58;
+                border-radius: 5px;
+            }
+            @include computadora{
+                width: 100%;
+                text-align: center;
+                background-color: whitesmoke;
+                border: 2px solid #474f58;
+                border-radius: 5px;
+            }
         }
     .imagen4-clientes{
+            grid-area: imagen4-clientes;
             width: 30%;
+            justify-content: center;
+            justify-items: center;
             @include tablet{
                 width: 40%;
+                justify-items: center;
+            }
+            @include computadora{
+                width: 40%;
+                justify-items: center;
             }
         }
     }

@@ -1,6 +1,7 @@
 /* BLOG */
 
 @import "tablet.scss";
+@import "computadora";
 
 /* estilos de body */
 
@@ -43,40 +44,77 @@ header{
 }
 
 main{
-    .main-blog{
-        grid-area: main-blog;
+    .container-card{
+        width: 100%;
         @include tablet{
-        grid-template-columns: 350px auto;
-        grid-template-rows: auto auto;
-        grid-template-areas: 
-            "parrafo1-blog" "imagen1-blog"
-            "imagen2-blog" "parrafo2-blog";
+            width: 100%;
+            display: flex;
+            max-width: 1100px;
         }
-    }
-    .parrafo1-blog{
-        grid-area: parrafo1-blog;
-        @include tablet{
-            grid-area: parrafo1-blog;
+        @include computadora{
+            width: 100%;
+            display: flex;
+            max-width: 1100px;
         }
-    }
-    .imagen1-blog{
-        grid-area: imagen1-blog;
-        width: 30%;
-        @include tablet{
-            grid-area: imagen1-blog;
+        .card-blog{
+            @include tablet{
+                width: 100%;
+                margin: 20px;
+                border-radius: 6px;
+                overflow: hidden;
+                background-color: #fff;
+                box-shadow: 0px 1px 10px rgb(0,0,0.2);
+                transition: all 400ms ease;
+            }
+            @include computadora{
+                width: 100%;
+                margin: 20px;
+                border-radius: 6px;
+                overflow: hidden;
+                background-color: #fff;
+                box-shadow: 0px 1px 10px rgb(0,0,0.2);
+                transition: all 400ms ease;
+            }
+            figure{
+                img{
+                    width: 100%;
+                    height: 210px;
+                }
+            }
+            .conteiner-blog{
+                padding: 15px;
+                text-align: center;
+                    p{
+                        line-height: 1.5;
+                        color: #6a6a6a;
+                    }
+                    a{
+                        text-decoration: none;
+                        display: inline-block;
+                        padding: 10px;
+                        margin-top: 10px;
+                        color: #2fb4cc;
+                        border: 1px solid #2fb4cc;
+                        border-radius: 4px;
+                        transition: all 400ms ease;
+
+                    }
+                    a:hover{
+                        background: #2fb4cc;
+                        color: #fff;
+                    }
+            }
         }
-    }
-    .parrafo2.blog{
-        grid-area: parrafo2-blog;
-        @include tablet{
-            grid-area: parrafo2-blog;
-        }
-    }
-    .imagen2-blog{
-        grid-area: imagen2-blog;
-        width: 30%;
-        @include tablet{
-            grid-area: imagen2-blog;
+        .card-blog:hover{
+            @include tablet{
+                box-shadow: 5px 5px 20px rgb(0,0,0.4); 
+                transform: translateY(-3%)
+            }
+            @include computadora{
+                box-shadow: 5px 5px 20px rgb(0,0,0.4); 
+                transform: translateY(-3%)
+            }
+
         }
     }
 }

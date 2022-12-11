@@ -1,6 +1,7 @@
 /* CONTACTO */
 
 @import "tablet.scss";
+@import "computadora";
 
 /* estilos de body */
 
@@ -54,6 +55,11 @@ main{
         }
       }
     @include tablet{
+        .form-container{
+            margin: 100px;
+        }
+    }
+    @include computadora{
         .form-container{
             margin: 100px;
         }

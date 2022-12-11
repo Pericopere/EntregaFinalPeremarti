@@ -1,6 +1,8 @@
 /* HOME */
 
 @import "tablet.scss";
+@import "computadora";
+@import "utilidades/variables.scss";
 
 /* estilos de body */
 
@@ -34,6 +36,7 @@ body{
 /* estilos de header */
 
 header{
+    background-color: $color-header;
     .header-home{
         grid-area: header-home;
         display: flex;
@@ -50,11 +53,15 @@ header{
 /* estilos de main */
 
 main{
-    min-height: 100%;
+    background-image: $color-main;
     .titulo-main{
         grid-area: titulo-main;
         text-align: center;
         @include tablet{
+            text-align: center;
+            padding: 4rem;
+        }
+        @include computadora{
             text-align: center;
             padding: 4rem;
         }
@@ -66,7 +73,22 @@ main{
             justify-content: center;
             align-items: center;
             gap: 10px;
-            grid-template-columns: 350px auto;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: 
+                "parrafo1-home imagen1-home"
+                "imagen2-home parrafo2-home"
+                "parrafo3-home imagen3-home"
+                "imagen4-home parrafo4-home"
+                    ;
+        }
+        @include computadora{
+            display: grid;
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            grid-template-columns: 50% 50%;
             grid-template-rows: auto auto auto auto;
             grid-template-areas: 
                 "parrafo1-home imagen1-home"
@@ -78,14 +100,25 @@ main{
         .parrafo1-home{
             grid-area: parrafo1-home;
             margin: 4px;
+            padding: 50px;
             @include tablet{
                 grid-area: parrafo1-home;
                 margin: 4px;
+                padding: 50px;
+            }
+            @include computadora{
+                grid-area: parrafo1-home;
+                margin: 4px;
+                padding: 50px;
             }
         }
         .imagen1-home{
-            width: 30%;
+            width: 40%;
             @include tablet{
+                grid-area: imagen1-home;
+                align-items: center;
+            }
+            @include computadora{
                 grid-area: imagen1-home;
                 align-items: center;
             }
@@ -93,14 +126,23 @@ main{
         .parrafo2-home{
             grid-area: parrafo2-home;
             margin: 4px;
+            padding: 50px;
             @include tablet{
+                grid-area: parrafo2-home;
+                margin: 4px;
+            }
+            @include computadora{
                 grid-area: parrafo2-home;
                 margin: 4px;
             }
         }
         .imagen2-home{
-            width: 30%;
+            width: 40%;
             @include tablet{
+                grid-area: imagen2-home;
+                align-items: center;
+            }
+            @include computadora{
                 grid-area: imagen2-home;
                 align-items: center;
             }
@@ -108,14 +150,23 @@ main{
         .parrafo3-home{
             grid-area: parrafo3-home;
             margin: 4px;
+            padding: 50px;
             @include tablet{
+                grid-area: parrafo3-home;
+                margin: 4px;
+            }
+            @include computadora{
                 grid-area: parrafo3-home;
                 margin: 4px;
             }
         }
         .imagen3-home{
-            width: 30%;
+            width: 40%;
             @include tablet{
+                grid-area: imagen3-home;
+                align-items: center;
+            }
+            @include computadora{
                 grid-area: imagen3-home;
                 align-items: center;
             }
@@ -123,14 +174,23 @@ main{
         .parrafo4-home{
             grid-area: parrafo4-home;
             margin: 4px;
+            padding: 50px;
             @include tablet{
+                grid-area: parrafo4-home;
+                margin: 4px;
+            }
+            @include computadora{
                 grid-area: parrafo4-home;
                 margin: 4px;
             }
         }
         .imagen4-home{
-            width: 30%;
+            width: 40%;
             @include tablet{
+                grid-area: imagen4-home;
+                align-items: center;
+            }
+            @include computadora{
                 grid-area: imagen4-home;
                 align-items: center;
             }
@@ -141,8 +201,12 @@ main{
 /* estilos de footer */
 
 footer{
+    background-image: $color-footer;
     .footer-home{
         @include tablet{
+            grid-area: footer-home
+        }
+        @include computadora{
             grid-area: footer-home
         }
     }

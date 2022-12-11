@@ -1,6 +1,7 @@
 /* SERVICIOS */
 
 @import "tablet.scss";
+@import "computadora";
 
 /* Estilos de body */
 
@@ -44,48 +45,63 @@ header{
 /* Estilos de main */
 
 main{
-    #services{
-        height: 70vh;
-        padding-top: 70px;
-        background: #f9f9f9;
-        h2{
-            padding-bottom: 50px;
+    .servicios-galeria{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: minmax(200px, auto);
+        gap: 20px;
+        padding: 20px;
+        grid-auto-flow: dense;
+        .servicios-caja{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            transition: transform 0.3s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-    }
-    .services-row{
-        .services-box{
-            float: left;
-            width: 33%;
-            padding: 20px;
-            img{
-                width: 100%;
-                padding-bottom: 20px;
-            }
+        .servicios-caja:hover{
+            filter: opacity(0.9);
+            transform: scale(1.04);
         }
-        .servicios-img1{
-            width: 50%;
-        }
-    @include tablet{
-        .services-box1 {
-            float: left;
-            width: 33%;
-            padding: 20px;
-          }
-        .services-box2 {
-            float: left;
-            width: 33%;
-            padding: 20px;
-          }
-        .services-box3 {
-            float: left;
-            width: 33%;
-            padding: 20px;
-          }
-        .services-box img {
+        .servicios-imagen{
             width: 100%;
-            padding-bottom: 20px;
-          }     
-    }
+            height: 100%;
         }
-    
+        @include tablet{
+        .cajaw{
+            grid-column: span 2;
+        }
+        .cajat{
+            grid-row: span 2;
+        }
+        .servicios-caja{
+            width: 100%;
+        }
+        .servicios-imagen{
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+        }
+        @include computadora{
+            .cajaw{
+                grid-column: span 2;
+            }
+            .cajat{
+                grid-row: span 2;
+            }
+            .servicios-caja{
+                width: 100%;
+            }
+            .servicios-imagen{
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+            }
+            }
+    }
+
 }
